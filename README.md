@@ -25,7 +25,7 @@ Creates a perspective for each project.el project. Based on [persp-mode-projecti
 ```
 
 ### Automatic buffer assignment
-By adding the following hooks, buffers are automatically assigned a project-specific perspective when ```perspective-project-bridge-mode``` is enabled and all bridge perspectives are killed when the mode disabled.
+By adding the following hook, all buffers are automatically assigned a project-specific perspective when ```perspective-project-bridge-mode``` is enabled and all bridge perspectives are killed when the mode is disabled.
 ```elisp
    (add-hook 'perspective-project-bridge-mode-hook
 			 (lambda ()

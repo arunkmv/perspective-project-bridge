@@ -6,6 +6,7 @@
 ;; Package-Requires: ((emacs "27.1") (perspective "2.18") (cl-lib "0.5"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Keywords: perspective, project, project.el
+;; URL: https://github.com/arunkmv/perspective-project-bridge
 
 ;;; License:
 
