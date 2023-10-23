@@ -3,9 +3,9 @@
 ;;
 ;; Author: Arunkumar Vaidyanathan <arunkumarmv1997@gmail.com>
 ;; Version: 0.1
-;; Package-Requires: ((emacs "27.1") (perspective "2.18") (cl-lib "0.5"))
+;; Package-Requires: ((emacs "27.1") (perspective "2.18"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
-;; Keywords: perspective, project, project.el
+;; Keywords: perspective, project, convenience, frames
 ;; URL: https://github.com/arunkmv/perspective-project-bridge
 
 ;;; License:
@@ -28,31 +28,34 @@
 
 ;;; Commentary:
 
-;; Creates a perspective for each project.el project.  Based on persp-mode-projectile-bridge.
-
+;; Creates a perspective for each project.el project.  Based on
+;; persp-mode-projectile-bridge.
+;;
 ;;; Usage:
 ;; Example configuration:
-
+;;
 ;; (with-eval-after-load "perspective-project-bridge-autoloads"
 ;;   (add-hook 'perspective-project-bridge-mode-hook
-;;             (lambda ()
-;;                 (if perspective-project-bridge-mode
-;;                     (perspective-project-bridge-find-perspectives-for-all-buffers)
-;;                   (perspective-project-bridge-kill-perspectives))))
+;; 	    (lambda ()
+;; 	      (if perspective-project-bridge-mode
+;; 		  (perspective-project-bridge-find-perspectives-for-all-buffers)
+;; 		(perspective-project-bridge-kill-perspectives))))
 ;;   (add-hook 'after-init-hook
-;;             (lambda ()
-;;                 (perspective-project-bridge-mode 1))
-;;             t))
+;; 	    (lambda ()
+;; 	      (perspective-project-bridge-mode 1))
+;; 	    t))
 ;; 
 ;; With use-package:
+;;
 ;; (use-package perspective-project-bridge
 ;;   :hook
-;;   (perspective-project-bridge-mode . (lambda ()
-;;                                       (if perspective-project-bridge-mode
-;;                                           (perspective-project-bridge-find-perspectives-for-all-buffers)
-;;                                         (perspective-project-bridge-kill-perspectives))))
+;;   (perspective-project-bridge-mode
+;;    .
+;;    (lambda ()
+;;      (if perspective-project-bridge-mode
+;; 	 (perspective-project-bridge-find-perspectives-for-all-buffers)
+;;        (perspective-project-bridge-kill-perspectives))))
 ;;   (persp-mode . perspective-project-bridge-mode))
-
 
 ;;; Code:
 
