@@ -61,6 +61,8 @@
 (require 'project)
 (require 'cl-lib)
 
+(defvar perspective-project-bridge-mode nil)
+
 (defgroup perspective-project-bridge nil
   "Perspective project.el integration."
   :group 'perspective
