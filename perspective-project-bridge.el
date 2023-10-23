@@ -85,7 +85,11 @@
       (when (and perspective-project-bridge-mode
 		 (buffer-name buffer)
 		 (project-current))
-	(let* ((name (project-name (project-current)))
+	(let* ((name (file-name-nondirectory
+		      (directory-file-name
+		       (if (fboundp 'project-root)
+			   (project-root (project-current))
+			 (car (project-roots (project-current)))))))
 	       (persp (persp-new name)))
 	  (with-perspective (persp-name persp)
 	    (setq perspective-project-bridge-persp t)
