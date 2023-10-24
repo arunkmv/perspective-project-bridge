@@ -120,6 +120,10 @@
   (let* ((b (current-buffer))
 	 (persp (perspective-project-bridge-find-perspective-for-buffer b)))
     (when persp
+      ;; Remove buffer from the perspective it was created in, if it
+      ;; does not belong there.
+      (when (not (eq persp (persp-curr)))
+	(persp-remove-buffer b))
       (persp-switch (persp-name persp))
       (persp-switch-to-buffer b))))
 
