@@ -1,5 +1,8 @@
 # Perspective project.el bridge
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![MELPA](https://melpa.org/packages/perspective-project-bridge-badge.svg)](https://melpa.org/#/perspective-project-bridge)
+
 Creates a perspective for each project.el project. Based on [persp-mode-projectile-bridge](https://github.com/Bad-ptr/persp-mode-projectile-bridge.el).
 
 ## Usage
